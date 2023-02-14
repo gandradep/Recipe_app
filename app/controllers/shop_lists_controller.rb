@@ -1,4 +1,3 @@
 class ShopListsController < ApplicationController
-  def display
-  end
+  def display; end
 end
