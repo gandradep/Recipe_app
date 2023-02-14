@@ -6,16 +6,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_foods = RecipeFood.all
   end
 
-  # GET /recipe_foods/1 or /recipe_foods/1.json
-  def show; end
-
-  # GET /recipe_foods/new
-  def new
-    @recipe_food = RecipeFood.new
-  end
-
-  # GET /recipe_foods/1/edit
-  def edit; end
+  def new; end
 
   # POST /recipe_foods or /recipe_foods.json
   def create
@@ -27,19 +18,6 @@ class RecipeFoodsController < ApplicationController
         format.json { render :show, status: :created, location: @recipe_food }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @recipe_food.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /recipe_foods/1 or /recipe_foods/1.json
-  def update
-    respond_to do |format|
-      if @recipe_food.update(recipe_food_params)
-        format.html { redirect_to recipe_food_url(@recipe_food), notice: 'Recipe food was successfully updated.' }
-        format.json { render :show, status: :ok, location: @recipe_food }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @recipe_food.errors, status: :unprocessable_entity }
       end
     end
