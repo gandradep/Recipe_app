@@ -6,7 +6,6 @@ class RecipesController < ApplicationController
     # logged in user recipes
     user_test = User.first
     @recipes = Recipe.where(user: user_test)
-    p @recipes
   end
 
   def public_recipes

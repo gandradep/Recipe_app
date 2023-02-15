@@ -1,7 +1,12 @@
-<% @recipes.each do |recipe| %>
+<% @recipes.each do |item| %>
 <div  class="d-flex border w-75 mx-auto p-2 my-3">
-    <h3 class="w-25"><%= recipe.name%></h3>
-    <p class="w-75"><%= recipe.description%></p>
+  <div class="w-25">
+    <h3><%= item.name%></h3>
+    <%= link_to 'REMOVE', recipe_path(item.id),
+    data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}
+%>
+  </div>
+  <p class="w-75"><%= item.description%></p>
 
 </div>
 <% end %>
