@@ -17,7 +17,6 @@ class FoodsController < ApplicationController
     @food = Food.new(food_params)
     @food.user = @user
 
-
     respond_to do |format|
       if @food.save
         format.html { redirect_to foods_url, notice: 'Food was successfully created.' }
