@@ -1,3 +1,30 @@
+<div class="">
+<h1>Add a recipe</h1>
+<%= form_with model: @recipe, url: recipes_path do |f|%>
+<div class="w80">
+  <%= f.label :name %> <br>
+  <%= f.text_field :name, class: '' %>
+  </div>
+  <div class="w80">
+  <%= f.label :preparation_time %> <br>
+  <%= f.text_field :preparation_time, class: '' %>
+  </div>
+   <div class="w80">
+  <%= f.label :cooking_time %> <br>
+  <%= f.text_field :cooking_time, class: '' %>
+  </div>
+  <div class="w80">
+  <%= f.label :description %> <br>
+  <%= f.text_area :description, class: 'textArea w100' %>
+  </div>
+  <%= f.submit "Add Recipe" %>
+<%end%>
+<% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+<% end %>
+</div>
+
+<!--
 <h1>New recipe</h1>
 
 <%= render "form", recipe: @recipe %>
@@ -7,3 +34,5 @@
 <div>
   <%= link_to "Back to recipes", recipes_path %>
 </div>
+
+-->
