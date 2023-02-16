@@ -68,6 +68,10 @@ development:
 test:
   <<: *default
   database: recipe_blog_test
+  username: postgres
+  password: 1620
+  port: 5432
+  host: localhost
 
 
 # As with config/credentials.yml, you never want to store sensitive information,
