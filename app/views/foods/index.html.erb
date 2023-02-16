@@ -1,4 +1,10 @@
 <p style="color: green"><%= notice %></p>
+<% if user_signed_in? %>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo: false } %>
+  <% else %>
+  <%= link_to "Sign up", new_user_registration_path %>
+  <%= link_to "Log in",  new_user_session_path %>
+<% end %>
 
 <h1 class="food-title">Foods</h1>
 
