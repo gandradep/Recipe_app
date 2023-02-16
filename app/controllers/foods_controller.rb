@@ -3,17 +3,19 @@ class FoodsController < ApplicationController
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.all
+    @user = current_user
+    @foods = @user.foods
   end
 
   # GET /foods/new
   def new
     @food = Food.new
+    @user = current_user
   end
 
   # POST /foods or /foods.json
   def create
-    @user = User.first
+    @user = current_user
     @food = Food.new(food_params)
     @food.user = @user
 

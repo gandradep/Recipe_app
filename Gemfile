@@ -5,11 +5,10 @@ ruby '3.0.0'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'devise', '~> 4.8', '>= 4.8.1'
-
 gem 'cancancan', '~> 3.4'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
