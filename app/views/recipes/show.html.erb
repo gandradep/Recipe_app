@@ -1,10 +1,21 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @recipe %>
-
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<div class="m-4">
+  <h1 class="text-center"><%= @recipe.name%></h1>
+  <div class="row mt-4">
+    <div class="col-7" >
+      <p>Preparation time: <%= @recipe.preparation_time%> minutes</p>
+      <p>Cooking time: <%= @recipe.cooking_time%> minutes</p>
+      <p>Steps: <%= @recipe.description%></p>
+    </div>
+    <div class="form-check form-switch col-3 align-self-center">
+      <% if @recipe.public?%>
+        <input class="form-check-input" type="checkbox" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+      <%else%>
+        <input class="form-check-input" type="checkbox" name="flexRadioDisabled" id="flexRadioCheckedDisabled" disabled>
+      <%end%>
+      <label class="form-check-label fw-bold text-dark" for="flexRadioCheckedDisabled">
+        Public
+      </label>
+    </div>
+  </div>
 </div>
