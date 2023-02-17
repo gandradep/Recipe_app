@@ -5,7 +5,8 @@
 <p class="text-success"><%= notice %></p>
 
 <% @recipes.each do |item| %>
-<div  class="d-flex border w-75 mx-auto p-2 my-3">
+<%if can? :read, item%>
+<div class="d-flex border w-75 mx-auto p-2 my-3">
   <div class="w-100">
     <h3><%= link_to item.name, recipe_path(item)%></h3>
     <h4>By: <%= item.user.name %></h4>
@@ -15,4 +16,5 @@
     <p class="w-100 ">Total price ($): <%= number_to_currency(item.total_cost)%></p>
   </div>
 </div>
+<%end%>
 <% end %>
