@@ -46,6 +46,13 @@ class RecipesController < ApplicationController
     end
   end
 
+  def shop_list
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredients = RecipeFood.where(recipe: @recipe)
+    @foods = Food.where(user: current_user)
+    p @foods
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
