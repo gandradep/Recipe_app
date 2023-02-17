@@ -12,7 +12,7 @@
       <% @ingredients.each do |item| %>
       <% val=item.food.price * item.quantity%>
         <tr>
-          <td><%= item.food.name%> <% p recipe_recipe_food_path(recipe_id: item.recipe_id, id: item.id)%></td>
+          <td><%= item.food.name%></td>
           <td><%= item.quantity%> <%= item.food.measurement_unit%></td>
           <td><%=val%>$</td>
           <td>
