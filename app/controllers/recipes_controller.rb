@@ -1,10 +1,11 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!, only: :public_recipes
 
   # GET /recipes or /recipes.json
   def index
     # logged in user recipes
-    @user_test = User.first
+    @user_test = current_user
     @recipes = Recipe.where(user: @user_test)
   end
 
@@ -23,7 +24,7 @@ class RecipesController < ApplicationController
 
   # POST /recipes or /recipes.json
   def create
-    usert = User.first
+    usert = current_user
     @recipe = Recipe.new(recipe_params)
     @recipe.user = usert
     respond_to do |format|
