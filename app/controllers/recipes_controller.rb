@@ -50,7 +50,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id])
     @ingredients = RecipeFood.where(recipe: @recipe)
     @foods = Food.where(user: current_user)
-    p @foods
   end
 
   private
