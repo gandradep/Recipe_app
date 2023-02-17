@@ -1,9 +1,12 @@
-<h1 class="new-food-title">New food</h1>
+<div class="position-absolute top-50 start-50 translate-middle mt-3">
+  <h1>New food</h1>
 
-<%= render "form", food: @food %>
 
-<br>
+  <%= render "form", food: @food %>
 
-<div class="back-to-foods-position">
-  <%= link_to "Back to foods", foods_path, class: 'back-to-foods' %>
+  <br>
+
+  <div class="back-to-foods-position">
+    <%= link_to "Back to foods", foods_path, class: 'back-to-foods' %>
+  </div>
 </div>
