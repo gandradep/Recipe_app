@@ -14,7 +14,7 @@
         <tr>
           <td><%= item.food.name%></td>
           <td><%= item.quantity%> <%= item.food.measurement_unit%></td>
-          <td><%=val%>$</td>
+          <td><%=number_to_currency(val)%></td>
           <td>
             <%= link_to 'REMOVE', recipe_recipe_food_path(recipe_id: item.recipe_id, id: item.id),
               data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}

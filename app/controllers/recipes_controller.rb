@@ -54,22 +54,21 @@ class RecipesController < ApplicationController
     @missing_item = 0
     @new_price = 0
     ingredients.each do |item|
-      if item.quantity > item.food.quantity
-        @missing_item += 1
-        new_quantity = item.quantity - item.food.quantity
-        val = item.food.price * new_quantity
-        @new_price += val
-        @missing.push(
-          {
-            'name' => item.food.name,
-            'new_q' => new_quantity,
-            'unit' => item.food.measurement_unit,
-            'price' => val
-          }
-        )
-      end
+      next unless item.quantity > item.food.quantity
+
+      @missing_item += 1
+      new_quantity = item.quantity - item.food.quantity
+      val = item.food.price * new_quantity
+      @new_price += val
+      @missing.push(
+        {
+          'name' => item.food.name,
+          'new_q' => new_quantity,
+          'unit' => item.food.measurement_unit,
+          'price' => val
+        }
+      )
     end
-    p @missing
   end
 
   private
@@ -82,8 +81,5 @@ class RecipesController < ApplicationController
   # Only allow a list of trusted parameters through.
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public)
-    # p 'ge'
-    # p params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public, :user_id)
-    # p 'en'
   end
 end

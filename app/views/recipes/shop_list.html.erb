@@ -1,11 +1,11 @@
-<h2>Shopping List</h2>
-<div class="d-flex justify-content-between w-50 m-auto">
 
+<h2 class="text-center ">Shopping List</h2>
+<div class="d-flex justify-content-between w-50 m-auto mt-4">
   <p>Amount of food items to buy: <%= @missing_item %></p>
   <p>Recipe: <%= @recipe.name%></p>
-  <p>Value of shopping list: <%= @new_price%></p>
 </div>
-<div>
+<p class="w-50 m-auto">Value of shopping list: <%= number_to_currency(@new_price)%></p>
+<div class="mt-4 w-75 m-auto">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -19,11 +19,9 @@
           <tr>
             <td><%= item['name']%></td>
             <td><%= item['new_q']%> <%= item['unit']%></td>
-            <td><%= item['price']%>$</td>
-
+            <td><%= number_to_currency(item['price'])%></td>
           </tr>
         <% end %>
-
     </tbody>
   </table>
 </div>
