@@ -1,4 +1,4 @@
-<%= form_with(model: recipe_food) do |form| %>
+<%= form_with(model: recipe_food, url: recipe_recipe_food_path ) do |form| %>
   <% if recipe_food.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
@@ -10,6 +10,10 @@
       </ul>
     </div>
   <% end %>
+  <div class="w80">
+    <%= form.label :title %> <br>
+    <%= form.text_field :title, class: 'w100' %>
+  </div>
 
   <div>
     <%= form.submit %>

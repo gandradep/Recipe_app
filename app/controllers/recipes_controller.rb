@@ -15,6 +15,7 @@ class RecipesController < ApplicationController
 
   def show
     @precipe = Recipe.find(params[:id])
+    @ingredients = RecipeFood.where(recipe: @precipe)
   end
 
   # GET /recipes/new
@@ -44,6 +45,12 @@ class RecipesController < ApplicationController
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def shop_list
+    @recipe = Recipe.find(params[:recipe_id])
+    @ingredients = RecipeFood.where(recipe: @recipe)
+    @foods = Food.where(user: current_user)
   end
 
   private
