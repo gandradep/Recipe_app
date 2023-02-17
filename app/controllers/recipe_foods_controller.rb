@@ -29,7 +29,6 @@ class RecipeFoodsController < ApplicationController
 
   # DELETE /recipe_foods/1 or /recipe_foods/1.json
   def destroy
-    p 'params'
     recipet = Recipe.find(params[:recipe_id])
     @recipe_food.destroy
 
