@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
 
   def show
     @precipe = Recipe.find(params[:id])
-    @ingredients = RecipeFood.where(recipe: @precipe)
+    @ingredients = RecipeFood.includes(:food).where(recipe: @precipe)
   end
 
   # GET /recipes/new
@@ -50,7 +50,7 @@ class RecipesController < ApplicationController
 
   def shop_list
     @recipe = Recipe.find(params[:recipe_id])
-    ingredients = RecipeFood.where(recipe: @recipe)
+    ingredients = RecipeFood.includes(:food).where(recipe: @recipe)
     @missing = []
     @missing_item = 0
     @new_price = 0

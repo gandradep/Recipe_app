@@ -24,8 +24,8 @@ default: &default
   username: railuser
   password: user
   # Josue db
-  username: postgres
-  password: 1620
+  # username: postgres
+  # password: 1620
 
 development:
   <<: *default
