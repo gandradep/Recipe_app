@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
   end
 
   def public_recipes
-    @recipes = Recipe.includes(:recipe_foods, :foods).all
+    @recipes = Recipe.includes(:recipe_foods, :foods).where(public: true)
   end
 
   def show

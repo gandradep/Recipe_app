@@ -5,12 +5,11 @@ RSpec.describe 'Public Recipe show', type: :system do
     before(:example) do
       @user = User.create(
         name: 'Gabriel',
-        email: 'didier@gmail.com',
+        email: 'user1@mail.com',
         password: 'anything',
         confirmed_at: Time.now.utc
       )
 
-      # sign_in @user
       @recipe = Recipe.create(
         name: 'Pizza',
         preparation_time: 10,
