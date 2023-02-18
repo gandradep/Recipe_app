@@ -29,7 +29,7 @@
 # 📖 Recipe-App <a name="about-project"></a>
 
 
-**Blog-App** is an application where you can save your favorite recipes, ingredients and make a comparison to know how many ingredients you are missing in quantity in order to prepare your favorite meals.
+**Recipe-App** is an application where you can save your favorite recipes, ingredients and make a comparison to know how many ingredients you are missing in quantity in order to prepare your favorite meals.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,10 +70,9 @@ In these apps we implement the devise gem to authenticate the user and you can h
 - **Use validation for models**
 - **Use controllers to handle requests and render empty views**
 - **Use preprocessed HTML file with embedded Ruby code.**
-- **Use Rails forms to add posts, comments and likes**
+- **Use Rails forms to add foods, recipes and ingredients to recipe**
 - **Use devise with authentication**
 - **Use cancancan for user authorization**
-- **Create API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,9 +172,8 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Processing data in models.**
-- [ ] **Views.**
-- [ ] **Forms**
+- [ ] **Create API**
+- [ ] **Deploy**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
