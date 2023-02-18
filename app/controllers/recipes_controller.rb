@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
-  skip_before_action :authenticate_user!, only: :public_recipes
+  skip_before_action :authenticate_user!, only: %i[public_recipes show]
 
   # GET /recipes or /recipes.json
   def index
@@ -11,6 +11,7 @@ class RecipesController < ApplicationController
 
   def public_recipes
     @recipes = Recipe.all
+    # authorize! :read, @recipes
   end
 
   def show
