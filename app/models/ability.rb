@@ -10,5 +10,6 @@ class Ability
     can :read, Recipe, user: user
 
     can :test, Recipe, user: user
+    # rubocop:enable Style/HashSyntax
   end
 end

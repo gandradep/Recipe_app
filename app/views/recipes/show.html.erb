@@ -22,10 +22,12 @@
   <div class="d-flex justify-content-around">
     <%= link_to "Generate shopping list", recipe_shop_list_path(@recipe), class:'btn btn-success' %>
     <%= link_to "Add Food", new_recipe_recipe_food_path(@recipe), class:'btn btn-success' %>
-</div>
+  </div>
+<div>
 <%end%>
-
-<%= render 'recipe_food_table'%>
+<div>
+  <%= render 'recipe_food_table'%>
+</div>
 
 
 
