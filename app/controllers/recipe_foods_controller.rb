@@ -3,7 +3,7 @@ class RecipeFoodsController < ApplicationController
 
   # GET /recipe_foods or /recipe_foods.json
   def index
-    @recipe_foods = RecipeFood.includes(:recipe, :food).all
+    @recipe_foods = RecipeFood.all
   end
 
   def new
