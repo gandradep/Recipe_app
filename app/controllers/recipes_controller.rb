@@ -10,12 +10,13 @@ class RecipesController < ApplicationController
   end
 
   def public_recipes
-    @recipes = Recipe.includes(:recipe_foods, :foods).all
+    @recipes = Recipe.all
+    # authorize! :read, @recipes
   end
 
   def show
     @precipe = Recipe.find(params[:id])
-    @ingredients = RecipeFood.includes(:food).where(recipe: @precipe)
+    @ingredients = RecipeFood.where(recipe: @precipe)
   end
 
   # GET /recipes/new
@@ -49,7 +50,7 @@ class RecipesController < ApplicationController
 
   def shop_list
     @recipe = Recipe.find(params[:recipe_id])
-    ingredients = RecipeFood.includes(:food).where(recipe: @recipe)
+    ingredients = RecipeFood.where(recipe: @recipe)
     @missing = []
     @missing_item = 0
     @new_price = 0

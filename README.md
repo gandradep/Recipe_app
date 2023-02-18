@@ -1,5 +1,14 @@
 <a name="readme-top"></a>
 
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -26,28 +35,29 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Recipe-App <a name="about-project"></a>
+# 📖 [your_project_name] <a name="about-project"></a>
 
+> Describe your project in 1 or 2 sentences.
 
-**Recipe-App** is an application where you can save your favorite recipes, ingredients and make a comparison to know how many ingredients you are missing in quantity in order to prepare your favorite meals.
+**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-In these apps we implement the devise gem to authenticate the user and you can have your recipes securely saved.
+> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://ruby-lang.com/">Ruby</a></li>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
   </ul>
 </details>
 
@@ -62,17 +72,11 @@ In these apps we implement the devise gem to authenticate the user and you can h
 
 ### Key Features <a name="key-features"></a>
 
+> Describe between 1-3 key features of the application.
 
-- **Use Ruby Gems as a software packages system.**
-- **Use database migration files to maintain database schema**
-- **Use data models with associations.**
-- **Use customize model methods**
-- **Use validation for models**
-- **Use controllers to handle requests and render empty views**
-- **Use preprocessed HTML file with embedded Ruby code.**
-- **Use Rails forms to add foods, recipes and ingredients to recipe**
-- **Use devise with authentication**
-- **Use cancancan for user authorization**
+- **[key_feature_1]**
+- **[key_feature_2]**
+- **[key_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,8 +84,9 @@ In these apps we implement the devise gem to authenticate the user and you can h
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+> Add a link to your deployed project.
 
-- Coming soon
+- [Live Demo Link](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,62 +94,83 @@ In these apps we implement the devise gem to authenticate the user and you can h
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
+> Describe how a new developer could make use of your project.
+
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need: Rails and postgres install on your local computer.
+In order to run this project you need:
 
+<!--
+Example command:
 
 ```sh
-  $ gem install rails
-
- #postgres for ubuntu: 
-  $ sudo apt update
-  $ sudo apt install postgresql postgresql-contrib
+ gem install rails
 ```
-
+ -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
+<!--
+Example commands:
 
 ```sh
-  https://github.com/gandradep/Recipe_app.git
+  cd my-folder
+  git clone git@github.com:myaccount/my-project.git
 ```
-
+--->
 
 ### Install
 
 Install this project with:
 
-
-
+<!--
+Example command:
 
 ```sh
-  $ bundle install
+  cd my-project
+  gem install
 ```
+--->
 
 ### Usage
 
 To run the project, execute the following command:
 
+<!--
+Example command:
 
 ```sh
-  $ rails server
+  rails server
 ```
-
+--->
 
 ### Run tests
 
 To run tests, run the following command:
 
+<!--
+Example command:
 
 ```sh
-  rspec
+  bin/rails test test/models/article_test.rb
 ```
+--->
 
+### Deployment
+
+You can deploy this project using:
+
+<!--
+Example:
+
+```sh
+
+```
+ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,17 +180,17 @@ To run tests, run the following command:
 
 > Mention all of the collaborators of this project.
 
-👤 **Gabriel Andrade**
+👤 **Author1**
 
-- GitHub: [@gandradep](https://github.com/gandradep)
-- Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/gabriel-andrade-silla-turca)
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Josué Benavides**
+👤 **Author2**
 
-- GitHub: [@jdbs9514](https://github.com/jdbs9514)
-- Twitter: [@JODA1015](https://twitter.com/JODA1015)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/macoin)
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,8 +198,11 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Create API**
-- [ ] **Deploy**
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **[new_feature_1]**
+- [ ] **[new_feature_2]**
+- [ ] **[new_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,7 +220,9 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project do not forget to start the repository.
+> Write a message to encourage readers to support your project
+
+If you like this project...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,10 +230,27 @@ If you like this project do not forget to start the repository.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-[Microverse](https://www.microverse.org/) for giving this project guides.
+> Give credit to everyone who inspired your codebase.
+
+I would like to thank...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FAQ (optional) -->
+
+## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+
+> Add at least 2 questions new developers would ask when they decide to use your project.
+
+- **[Question_1]**
+
+  - [Answer_1]
+
+- **[Question_2]**
+
+  - [Answer_2]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
