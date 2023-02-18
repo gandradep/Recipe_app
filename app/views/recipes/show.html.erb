@@ -1,0 +1,34 @@
+
+<div class="d-flex flex-column m-4 row-gap-4">
+  <h1 class="text-center"><%= @recipe.name%></h1>
+  <div class="d-flex justify-content-between m-auto w-75">
+    <div class="" >
+      <p>Preparation time: <%= @recipe.preparation_time%> minutes</p>
+      <p>Cooking time: <%= @recipe.cooking_time%> minutes</p>
+      <p>Steps: <%= @recipe.description%></p>
+    </div>
+    <div class="form-check form-switch">
+      <% if @recipe.public?%>
+        <input class="form-check-input" type="checkbox" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+      <%else%>
+        <input class="form-check-input" type="checkbox" name="flexRadioDisabled" id="flexRadioCheckedDisabled" disabled>
+      <%end%>
+      <label class="form-check-label fw-bold text-dark" for="flexRadioCheckedDisabled">
+        Public
+      </label>
+    </div>
+  </div>
+  <% if can? :test, @recipe%>
+  <div class="d-flex justify-content-around">
+    <%= link_to "Generate shopping list", recipe_shop_list_path(@recipe), class:'btn btn-success' %>
+    <%= link_to "Add Food", new_recipe_recipe_food_path(@recipe), class:'btn btn-success' %>
+  </div>
+<div>
+<%end%>
+<div>
+  <%= render 'recipe_food_table'%>
+</div>
+
+
+
+

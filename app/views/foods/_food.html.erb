@@ -1,0 +1,19 @@
+<head>
+  <link rel="stylesheet" href="/assets/stylesheets/food.css">
+</head>
+
+<div class="content-table-food">
+  <tbody>
+    <tr class="tr-content">
+      <td><%= food.name %></td>
+      <td><%= food.measurement_unit %></td>
+      <td><%= number_to_currency(food.price) %></td>
+      <td><%= food.quantity %></td>
+      <td>
+        <%= link_to "Delete", food_path(food),
+        data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}
+        %>
+      </td>
+    </tr>
+  </tbody>
+</div>

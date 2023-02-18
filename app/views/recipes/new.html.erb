@@ -1,0 +1,32 @@
+<div class="ms-4 mt-2 w-50">
+<h2>Add a recipe</h2>
+<%= form_with model: @recipe, url: recipes_path do |f|%>
+<div class="mt-3">
+  <%= f.label :name, class: 'form-label' %>
+  <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="mt-3" >
+  <%= f.label :preparation_time, class: 'form-label' %>
+  <%= f.text_field :preparation_time, class: 'form-control' %>
+  </div>
+   <div class="mt-3">
+  <%= f.label :cooking_time, class: 'form-label' %>
+  <%= f.text_field :cooking_time, class: 'form-control' %>
+  </div>
+  <div class="mt-3">
+  <%= f.label :description, class: 'form-label' %> <br>
+  <%= f.text_area :description, class: 'form-control', rows:3 %>
+  </div>
+  <div class="mt-3">
+      <%= f.label :public %><br/>
+      <%= f.label :public, "Yes", value: "true" %>
+      <%= f.radio_button :public, true, checked: true %> &nbsp; &nbsp;
+      <%= f.label :public, "No", value: "false" %>
+      <%= f.radio_button :public, false %>
+    </div>
+  <%= f.submit "Add Recipe", class: 'mt-2' %>
+<%end%>
+<% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+<% end %>
+</div>

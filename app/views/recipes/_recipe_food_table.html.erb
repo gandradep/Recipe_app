@@ -1,0 +1,31 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Food</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Value</th>
+        <% if can? :test, @recipe%>
+        <th scope="col">Actions</th>
+        <%end%>
+      </tr>
+    </thead>
+    <tbody>
+      <% @ingredients.each do |item| %>
+      <% val=item.food.price * item.quantity%>
+        <tr>
+          <td><%= item.food.name%></td>
+          <td><%= item.quantity%> <%= item.food.measurement_unit%></td>
+          <td><%=number_to_currency(val)%></td>
+          <% if can? :test, @recipe%>
+          <td>
+            <%= link_to 'REMOVE', recipe_recipe_food_path(recipe_id: item.recipe_id, id: item.id),
+              data: { turbo_method: :delete, turbo_confirm: "Are you  sure?"}
+            %>
+            </td>
+            <%end%>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
