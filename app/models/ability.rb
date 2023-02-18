@@ -6,10 +6,7 @@ class Ability
 
     return unless user.present?
 
-    # rubocop:disable Style/HashSyntax
-    can :read, Recipe, user: user
-
-    can :test, Recipe, user: user
-    # rubocop:enable Style/HashSyntax
+    can :read, Recipe, user_id: user.id
+    can :test, Recipe, user_id: user.id
   end
 end
