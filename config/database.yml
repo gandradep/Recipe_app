@@ -21,8 +21,7 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # Gabriel db
-  username: railuser
-  password: user
+
   # Josue db
   # username: postgres
   # password: 1620
@@ -30,10 +29,10 @@ default: &default
 development:
   <<: *default
   database: recipe_blog_development
-  # username: postgres
-  # password: 1620
-  # port: 5432
-  # host: localhost
+  username: railuser
+  password: user
+  port: 5432
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -96,5 +95,6 @@ test:
 #
 production:
   <<: *default
-  database: recipe_blog_production
+  url: <%= ENV["DATABASE_URL"] %>
+  # database: recipe_blog_production
 
