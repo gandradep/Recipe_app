@@ -97,8 +97,9 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: recipe_blog_production
-  username: recipe_blog
+  database: recipe_app_production_dem9
+  username: recipe_app_production_dem9_user
   password: <%= ENV['RECIPE_BLOG_DATABASE_PASSWORD'] %>
+  port: 5432
   # database: recipe_blog_production
 
